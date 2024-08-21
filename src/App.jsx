@@ -1,11 +1,22 @@
 import { Header } from "./components/Header"
 import { Post } from "./Post"
+
+import  styles  from "./App.module.css"
+
 import './global.css'
+import { Sidebar } from "./components/Sidebar"
+
+
 function App() {
   return (
   <div>
     <Header />
-    <Post 
+  
+
+    <div className={styles.wrapper}>
+      <Sidebar />
+      <main>
+      <Post 
       author= "Diego Fernandes" 
       content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sit ad animi, totam fugit, doloribus libero ratione dolorum consequatur pariatur ipsam inventore accusantium perferendis facilis rerum commodi eius eveniet est!"
     />
@@ -14,6 +25,8 @@ function App() {
       author= "Mateus Macedo" 
       content="Um novo post"
     />
+      </main>
+    </div>
   </div>  
   )
 }
